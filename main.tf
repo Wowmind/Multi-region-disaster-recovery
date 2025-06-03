@@ -99,7 +99,7 @@ resource "aws_s3_bucket_replication_configuration" "replication" {
 }
 
 
-# S3 BUCKET POLICY FOR CF + REPLICATION
+# S3 BUCKET POLICY FOR CloudFront + REPLICATION
 
 resource "aws_s3_bucket_policy" "primary_policy" {
   provider = aws.primary
