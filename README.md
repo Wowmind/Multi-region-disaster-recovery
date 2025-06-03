@@ -19,7 +19,10 @@ Confirm the changes when prompted. After completion, Terraform will output the C
 aws s3 sync website/ s3://<your-primary-bucket-name>
 Replace <your-primary-bucket-name> with the name shown in Terraform output (e.g., my-static-site-us-east-1).
 
-5. Access the Website
+### 5. Access the Website
 Copy and paste the CloudFront URL into your browser (output as cloudfront_url) and enjoy your globally delivered static site!
 
 
+ ### Notes
+Replication will begin only after uploading versioned objects to the primary bucket.
+CloudFront uses the default AWS certificate (*.cloudfront.net) for HTTPS.
